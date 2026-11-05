@@ -42,3 +42,19 @@ eligibility check before applying avoids this.
    2 years is **eligible** (boundary).
 5. If the age or years lived in the borough is not a whole number of zero
    or more, the resident sees an error message and no decision is made.
+
+## Project files
+
+- `features/eligibility.feature`: the BDD scenarios (Gherkin)
+- `features/steps/eligibility_steps.py`: step definitions linking scenarios to code
+- `eligibility.py`: the eligibility rules and input validation
+- `evidence/`: saved `behave` output from each stage (red, partly green, green)
+
+## How to run
+
+Requires Python 3 and behave:
+
+```
+pip install behave
+behave
+```
