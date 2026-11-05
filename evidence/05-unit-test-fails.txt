@@ -1,0 +1,26 @@
+============================= test session starts =============================
+platform win32 -- Python 3.15.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Don Chubriev\AppData\Local\Programs\Python\Python315\python.exe
+rootdir: C:\Users\Don Chubriev\Desktop\Agile Programming Assignment\housing-eligibility-checker
+collecting ... collected 8 items
+
+test_eligibility.py::test_whole_number_text_is_converted PASSED          [ 12%]
+test_eligibility.py::test_surrounding_spaces_are_ignored PASSED          [ 25%]
+test_eligibility.py::test_invalid_text_is_rejected[abc] PASSED           [ 37%]
+test_eligibility.py::test_invalid_text_is_rejected[-1] PASSED            [ 50%]
+test_eligibility.py::test_invalid_text_is_rejected[17.5] PASSED          [ 62%]
+test_eligibility.py::test_invalid_text_is_rejected[] PASSED              [ 75%]
+test_eligibility.py::test_years_in_borough_greater_than_age_is_rejected FAILED [ 87%]
+test_eligibility.py::test_years_in_borough_equal_to_age_is_allowed PASSED [100%]
+
+================================== FAILURES ===================================
+_____________ test_years_in_borough_greater_than_age_is_rejected ______________
+
+    def test_years_in_borough_greater_than_age_is_rejected():
+>       with pytest.raises(ValueError, match="Years in the borough cannot be more than age"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+test_eligibility.py:22: Failed
+=========================== short test summary info ===========================
+FAILED test_eligibility.py::test_years_in_borough_greater_than_age_is_rejected
+========================= 1 failed, 7 passed in 0.33s =========================
