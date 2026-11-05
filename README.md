@@ -56,20 +56,33 @@ A change is done only when:
 5. The README is up to date and the change is committed and pushed with a
    clear message.
 
-Work is tracked on the [Kanban board](KANBAN.md).
+Work is tracked on the
+[GitHub Kanban board](https://github.com/users/BVLLgoicho/projects/4)
+(see also [KANBAN.md](KANBAN.md)).
+
+## Testing layers
+
+- **Unit tests** (`pytest`): check each function on its own, such as the
+  input validation and the years-greater-than-age rule.
+- **Acceptance tests** (`behave`): the BDD scenarios check the behaviour the
+  resident and service manager asked for, in plain English.
+- **Regression:** both suites are run before every commit, so old behaviour
+  never breaks unnoticed.
 
 ## Project files
 
 - `features/eligibility.feature`: the BDD scenarios (Gherkin)
 - `features/steps/eligibility_steps.py`: step definitions linking scenarios to code
 - `eligibility.py`: the eligibility rules and input validation
-- `evidence/`: saved `behave` output from each stage (red, partly green, green)
+- `test_eligibility.py`: unit tests (pytest)
+- `evidence/`: saved test output from each red and green stage
 
 ## How to run
 
-Requires Python 3 and behave:
+Requires Python 3, behave and pytest:
 
 ```
-pip install behave
+pip install behave pytest
 behave
+pytest -v
 ```
