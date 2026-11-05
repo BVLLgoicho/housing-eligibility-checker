@@ -42,6 +42,8 @@ eligibility check before applying avoids this.
    2 years is **eligible** (boundary).
 5. If the age or years lived in the borough is not a whole number of zero
    or more, the resident sees an error message and no decision is made.
+6. If the years lived in the borough is greater than the resident's age,
+   the resident sees an error message and no decision is made.
 
 ## Definition of Done
 

@@ -32,3 +32,4 @@ Feature: Housing register eligibility check
       | abc | 5     | Age must be a whole number of 0 or more                  |
       | -1  | 5     | Age must be a whole number of 0 or more                  |
       | 30  | two   | Years in the borough must be a whole number of 0 or more |
+      | 30  | 40    | Years in the borough cannot be more than age             |
