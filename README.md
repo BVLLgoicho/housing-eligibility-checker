@@ -43,6 +43,19 @@ eligibility check before applying avoids this.
 5. If the age or years lived in the borough is not a whole number of zero
    or more, the resident sees an error message and no decision is made.
 
+## Definition of Done
+
+A change is done only when:
+
+1. Its behaviour is described by a BDD scenario or example, written first.
+2. New logic has unit tests, written before the code (TDD).
+3. All `behave` scenarios and `pytest` unit tests pass.
+4. The code has been tidied (Boy Scout Rule) with no duplicated logic.
+5. The README is up to date and the change is committed and pushed with a
+   clear message.
+
+Work is tracked on the [Kanban board](KANBAN.md).
+
 ## Project files
 
 - `features/eligibility.feature`: the BDD scenarios (Gherkin)
