@@ -16,9 +16,9 @@ def check_eligibility(age_text, years_text):
         raise ValueError("Years in the borough cannot be more than age")
 
     if age < MINIMUM_AGE:
-        return "Not eligible: you must be 18 or over"
+        return f"Not eligible: you must be {MINIMUM_AGE} or over"
     if years_in_borough < MINIMUM_YEARS_IN_BOROUGH:
-        return "Not eligible: you must have lived in the borough for at least 2 years"
+        return f"Not eligible: you must have lived in the borough for at least {MINIMUM_YEARS_IN_BOROUGH} years"
     return "Eligible"
 
 
