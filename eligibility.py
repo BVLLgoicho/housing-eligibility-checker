@@ -12,6 +12,9 @@ def check_eligibility(age_text, years_text):
     age = to_whole_number(age_text, "Age")
     years_in_borough = to_whole_number(years_text, "Years in the borough")
 
+    if years_in_borough > age:
+        raise ValueError("Years in the borough cannot be more than age")
+
     if age < MINIMUM_AGE:
         return "Not eligible: you must be 18 or over"
     if years_in_borough < MINIMUM_YEARS_IN_BOROUGH:
